@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Restaurant" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/restaurant_primary</item>
+        <item name="colorPrimaryVariant">@color/restaurant_primary_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/restaurant_accent</item>
+        <item name="colorOnSecondary">@color/black</item>
+    </style>
+</resources>

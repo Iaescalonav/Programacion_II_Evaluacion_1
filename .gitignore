@@ -1,0 +1,38 @@
+# Android Studio
+*.iml
+.gradle/
+/local.properties
+/.idea/
+/build/
+/app/build/
+/captures
+.externalNativeBuild/
+.cxx/
+
+# Kotlin
+*.class
+*.jar
+*.war
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Claude Code / Agentes / Documentación interna
+.claude/
+CLAUDE.md
+docs/
+
+# Informe Word
+*.docx
+
+# Archivos generados
+*.apk
+*.aab
+*.ap_
+*.dex
+
+# Local
+local.properties
+*.log

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- ==================== ZONA SUPERIOR (platillos) ==================== -->
+
+    <!-- Botón Borrar Pedido (esquina superior derecha) -->
+    <ImageButton
+        android:id="@+id/btnBorrarPedido"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@android:drawable/ic_menu_delete"
+        android:contentDescription="Borrar pedido"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Logo del restaurante -->
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/ic_restaurant"
+        android:contentDescription="Logo del restaurante"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Título del restaurante -->
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Restaurante VANCY"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/ivLogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- ==================== PASTEL DE CHOCLO ==================== -->
+
+    <!-- Imagen Pastel de Choclo -->
+    <ImageView
+        android:id="@+id/ivPastelChoclo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/pastel_choclo"
+        android:scaleType="centerCrop"
+        android:contentDescription="Pastel de Choclo"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitulo"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Nombre y precio Pastel de Choclo -->
+    <TextView
+        android:id="@+id/tvNombrePastel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Pastel de Choclo - $12.000"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toTopOf="@id/ivPastelChoclo"
+        app:layout_constraintStart_toEndOf="@id/ivPastelChoclo"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Etiqueta Cantidad Pastel -->
+    <TextView
+        android:id="@+id/tvLabelCantidadPastel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cantidad:"
+        android:textSize="14sp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/tvNombrePastel"
+        app:layout_constraintStart_toEndOf="@id/ivPastelChoclo" />
+
+    <!-- EditText Cantidad Pastel de Choclo -->
+    <EditText
+        android:id="@+id/etCantidadPastel"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="0"
+        android:textAlignment="center"
+        android:importantForAutofill="no"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvLabelCantidadPastel"
+        app:layout_constraintStart_toEndOf="@id/tvLabelCantidadPastel" />
+
+    <!-- Subtotal Pastel de Choclo -->
+    <TextView
+        android:id="@+id/tvSubtotalPastel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subtotal: $0"
+        android:textSize="13sp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvLabelCantidadPastel"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- ==================== CAZUELA ==================== -->
+
+    <!-- Imagen Cazuela -->
+    <ImageView
+        android:id="@+id/ivCazuela"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/cazuela"
+        android:scaleType="centerCrop"
+        android:contentDescription="Cazuela"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@id/ivPastelChoclo"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Nombre y precio Cazuela -->
+    <TextView
+        android:id="@+id/tvNombreCazuela"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Cazuela - $10.000"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toTopOf="@id/ivCazuela"
+        app:layout_constraintStart_toEndOf="@id/ivCazuela"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Etiqueta Cantidad Cazuela -->
+    <TextView
+        android:id="@+id/tvLabelCantidadCazuela"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cantidad:"
+        android:textSize="14sp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/tvNombreCazuela"
+        app:layout_constraintStart_toEndOf="@id/ivCazuela" />
+
+    <!-- EditText Cantidad Cazuela -->
+    <EditText
+        android:id="@+id/etCantidadCazuela"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="0"
+        android:textAlignment="center"
+        android:importantForAutofill="no"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvLabelCantidadCazuela"
+        app:layout_constraintStart_toEndOf="@id/tvLabelCantidadCazuela" />
+
+    <!-- Subtotal Cazuela -->
+    <TextView
+        android:id="@+id/tvSubtotalCazuela"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subtotal: $0"
+        android:textSize="13sp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvLabelCantidadCazuela"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- ==================== ZONA INFERIOR FIJA (totales + propina) ==================== -->
+
+    <!-- Línea divisoria -->
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#CCCCCC"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@id/tvTotalSinPropina"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Total sin propina -->
+    <TextView
+        android:id="@+id/tvTotalSinPropina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total sin propina: $0"
+        android:textSize="15sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="6dp"
+        app:layout_constraintBottom_toTopOf="@id/swPropina"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Switch de Propina -->
+    <Switch
+        android:id="@+id/swPropina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Propina 10%"
+        android:checked="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="6dp"
+        app:layout_constraintBottom_toTopOf="@id/tvPropina"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Monto de propina -->
+    <TextView
+        android:id="@+id/tvPropina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Propina: $0"
+        android:textSize="15sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@id/tvTotalConPropina"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Total con propina (destacado) -->
+    <TextView
+        android:id="@+id/tvTotalConPropina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TOTAL: $0"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#1B5E20"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
